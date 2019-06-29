@@ -154,6 +154,7 @@ function Show-Ast
             Font = $font
             TabIndex = 0;
             PathSeparator = "."
+			Anchor = echo Left Top Bottom
         }
         $treeView.Add_AfterSelect( { OnAfterSelect @args } )
 
@@ -198,6 +199,7 @@ function Show-Ast
             SelectionMode = [System.Windows.Forms.DataGridViewSelectionMode]::FullRowSelect
             Size = [System.Drawing.Size]@{Width = 600; Height = 256}
             TabIndex = 1
+			Anchor = echo Left Bottom
         }
         $dataView.Columns.AddRange(
             [System.Windows.Forms.DataGridViewTextBoxColumn]@{
@@ -228,6 +230,7 @@ function Show-Ast
             TabIndex = 2
             Text = $InputObject.Extent.Text
             WordWrap = $false
+			Anchor = echo Left Top Bottom Right
         }
 
         $script:BufferIsDirty = $false

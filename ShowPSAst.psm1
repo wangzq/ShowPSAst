@@ -245,6 +245,7 @@ function Show-Ast
             $form = [Windows.Forms.Form]@{
                 Text = "Ast Explorer"
                 ClientSize = [System.Drawing.Size]@{Width = 1200; Height = 700}
+				WindowState = 'Maximized'
             }
             $form.Controls.Add($dataView)
             $form.Controls.Add($treeView)
